@@ -1,0 +1,7 @@
+include "/usr/share/nano/python.nanorc"
+set autoindent
+set tabsize 4
+set mouse
+set linenumbers
+set nohelp
+
