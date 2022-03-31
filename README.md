@@ -1,12 +1,12 @@
 # Linux-Configs
 
-# Update all system
+## Update all system
 ```bash
 sudo pacman -Suuyy
 ```
 
 
-# install yay
+## install yay
 ```bash
 sudo pacman -S --needed git base-devel
 cd /tmp
@@ -16,20 +16,20 @@ makepkg -si
 ```
 
 
-# zsh
+## zsh
 ```bash
 chsh -s /usr/bin/zsh
 ```
 
 
-# Install some usefull programs...
+## Install some usefull programs...
 ```bash
 yay nano rust alacritty htop tmux
 cargo install exa ripgrep procs bat
 ```
 
 
-# Enable systemd-homed for login and password work every time
+## Enable systemd-homed for login and password work every time
 ```bash
 systemctl start systemd-homed
 systemctl enable systemd-homed
