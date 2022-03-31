@@ -24,7 +24,7 @@ chsh -s /usr/bin/zsh
 
 ## Install some usefull programs...
 ```bash
-yay nano rust alacritty htop tmux
+yay nano rust ruby alacritty htop tmux wget zsh-autosuggestions zsh-syntax-highlighting visual-studio-code-bin teamviewer python-pip
 cargo install exa ripgrep procs bat
 ```
 
@@ -33,5 +33,13 @@ cargo install exa ripgrep procs bat
 ```bash
 systemctl start systemd-homed
 systemctl enable systemd-homed
+```
+
+## Hacking Tools
+```bash
+pip install impacket
+pip install pwntools
+gem install evil-winrm
+yay ffuf
 ```
 
