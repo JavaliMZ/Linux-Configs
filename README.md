@@ -43,3 +43,11 @@ gem install evil-winrm
 yay ffuf
 ```
 
+## Vscode Compatibility
+```bash
+yay -S visual-studio-code-bin
+yay -S libdbusmenu-glib
+yay -S gnome-keyring
+yay -Suuyy
+
+```

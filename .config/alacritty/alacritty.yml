@@ -19,10 +19,10 @@ scrolling:
 
 font:
   normal:
-    family: Caskaydia Cove Nerd Font
+    family: Hack Nerd Font
     style: Medium
   bold:
-    family: Caskaydia Cove Nerd Font
+    family: Hack Nerd Font
     style: Bold
 draw_bold_text_with_bright_color: true
 
