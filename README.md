@@ -51,3 +51,15 @@ yay -S gnome-keyring
 yay -Suuyy
 
 ```
+
+# I3WM customization
+fibonacci layout:
+
+```bash
+yay -S python-i3ipc
+cd $HOME/.config/i3/
+wget https://raw.githubusercontent.com/olemartinorg/i3-alternating-layout/master/alternating_layouts.py
+chmod +x alternating_layouts.py
+```
+add this line on /.config/i3/config
+>exec_always python $HOME/.config/i3/alternating_layouts.py

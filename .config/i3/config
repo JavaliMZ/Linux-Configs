@@ -9,6 +9,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-fill /usr/share/backgrounds/i3/wall.png
 exec_always picom -f
 exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
+exec_always python $HOME/.config/i3/alternating_layouts.py
 
 # i3 settings
 set $mod Mod4
