@@ -2,6 +2,8 @@
 extended_path=.:/home/javali/.local/bin:/home/javali/.cargo/bin
 export PATH=$PATH:$extended_path
 
+# Historique
+eval "$(mcfly init zsh)"
 
 # aliases
 alias history="history 0"    # Help zsh...
