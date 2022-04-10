@@ -10,15 +10,15 @@ exec_always feh --bg-fill /usr/share/backgrounds/i3/wall.png
 exec_always picom -f
 exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
 exec_always python $HOME/.config/i3/alternating_layouts.py
-
+ 
 # i3 settings
 set $mod Mod4
 font pango:monospace 15
 gaps inner 10
 
 # Lanchers
-bindsym $mod+p exec flameshot gui
-bindsym $mod+Shift+s exec flameshot screen
+bindsym $mod+p exec flameshot screen
+bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Return exec alacritty
 bindsym $mod+w kill
 bindsym $mod+space exec --no-startup-id rofi -show drun -theme Monokai -icon-theme "Tela-circle" -show-icons

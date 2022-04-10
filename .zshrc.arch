@@ -28,7 +28,6 @@ setopt nonomatch           # hide error message if there is no match for the pat
 setopt notify              # report the status of background jobs immediately
 setopt numericglobsort     # sort filenames numerically when it makes sense
 
-
 WORDCHARS=${WORDCHARS//\/} # Don't consider certain characters part of the word
 PROMPT_EOL_MARK=""         # hide EOL sign ('%')
 
@@ -141,7 +140,7 @@ configure_prompt() {
 # The following block is surrounded by two delimiters.
 # These delimiters must not be modified. Thanks.
 precmd() { precmd() { print -rP "" } }
-PROMPT_ALTERNATIVE=twoline
+PROMPT_ALTERNATIVE=oneline
 setopt prompt_subst        # enable command substitution in prompt
 setopt promptsubst         # enable command substitution in prompt
 
