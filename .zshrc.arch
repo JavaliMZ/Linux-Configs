@@ -1,9 +1,15 @@
 # Path
-extended_path=.:/home/javali/.local/bin:/home/javali/.cargo/bin:/home/javali/.local/share/gem/ruby/3.0.0/bin
+extended_path=.:/home/javali/.local/bin:/home/javali/.cargo/bin:/home/javali/.local/share/gem/ruby/3.0.0/bin:/home/javali/.fzf/bin
 export PATH=$PATH:$extended_path
+
+
 
 # Historique
 eval "$(mcfly init zsh)"
+export FZF_DEFAULT_COMMAND='find / -type f 2>/dev/null'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+export FZF_DEFAULT_OPTS='--height 40% --border --cycle --prompt="❯ " --pointer="▶" --marker="│" --reverse'
+export FZF_CTRL_T_OPTS='--height 70% --border --preview "cat {}" --cycle --prompt="❯ " --pointer="▶" --marker="│"'
 
 # aliases
 alias history="history 0"
@@ -253,9 +259,12 @@ fixHistory() {
 ## Plugins!
 zshautosuggestions='/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh'
 zshsudo='/usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh'
-fzfkeybindings='/usr/share/fzf/key-bindings.zsh'
+fzfkeybindings='/home/javali/.fzf/shell/key-bindings.zsh'
+fzfcompletion='/home/javali/.fzf/shell/completion.zsh'
 
-[ -f $zshautosuggestions ] && source $zshautosuggestions && ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#444'
-[ -f $zshsudo ] && source $zshsudo
-[ -f $fzfkeybindings ] && source $fzfkeybindings
+[ -f $zshautosuggestions ] && source $zshautosuggestions && ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#444' || echo "Plugin zsh-autosuggestions not found"
+[ -f $zshsudo ] && source $zshsudo || echo "Plugin zsh-sudo not found"
+[ -f $fzfkeybindings ] && source $fzfkeybindings || echo "Plugin fzf-keybindings not found"
+[ -f $fzfcompletion ] && source $fzfcompletion || echo "Plugin fzf-completion not found"
+
 
