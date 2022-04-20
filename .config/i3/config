@@ -7,7 +7,7 @@
 # Always execute on start
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-fill /usr/share/backgrounds/i3/wall.png
-exec_always picom -f
+exec_always picom -f --config $HOME/.config/picom/picom.conf
 exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
 exec_always python $HOME/.config/i3/alternating_layouts.py
  
@@ -21,8 +21,8 @@ bindsym $mod+p exec flameshot screen
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Return exec alacritty
 bindsym $mod+w kill
-bindsym $mod+space exec --no-startup-id rofi -show drun -theme Monokai -icon-theme "Tela-circle" -show-icons
-bindsym $mod+Shift+d exec --no-startup-id rofi -show run -theme Monokai
+# bindsym $mod+space exec --no-startup-id rofi -show drun -theme Monokai -icon-theme "Tela-circle" -show-icons
+bindsym $mod+space exec --no-startup-id rofi -show run -theme Monokai -icon-theme "Tela.circle" -show-icons
 bindsym $mod+l exec betterlockscreen -l
 
 # Volume and brightness
