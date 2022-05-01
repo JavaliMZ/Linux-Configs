@@ -261,11 +261,10 @@ zshautosuggestions='/usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestio
 zshsudo='/usr/share/zsh/plugins/zsh-sudo/sudo.plugin.zsh'
 fzfkeybindings='/home/javali/.fzf/shell/key-bindings.zsh'
 fzfcompletion='/home/javali/.fzf/shell/completion.zsh'
+opam='/home/javali/.opam/opam-init/init.zsh'
 
 [ -f $zshautosuggestions ] && source $zshautosuggestions && ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=#444' || echo "Plugin zsh-autosuggestions not found"
 [ -f $zshsudo ] && source $zshsudo || echo "Plugin zsh-sudo not found"
 [ -f $fzfkeybindings ] && source $fzfkeybindings || echo "Plugin fzf-keybindings not found"
 [ -f $fzfcompletion ] && source $fzfcompletion || echo "Plugin fzf-completion not found"
-
-# opam configuration
-[[ ! -r /home/javali/.opam/opam-init/init.zsh ]] || source /home/javali/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
+[ -f $opam ] && source $opam > /dev/null 2> /dev/null || echo "Arch can't open opam..."
