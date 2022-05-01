@@ -5,6 +5,7 @@
 ############################
 
 # Always execute on start
+exec_always /home/javali/.opam/default/bin/google-drive-ocamlfuse Google-Drive
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec_always feh --bg-fill /usr/share/backgrounds/i3/wall.png
 exec_always picom -f --config $HOME/.config/picom/picom.conf

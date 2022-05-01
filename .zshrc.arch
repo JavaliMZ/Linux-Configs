@@ -267,4 +267,5 @@ fzfcompletion='/home/javali/.fzf/shell/completion.zsh'
 [ -f $fzfkeybindings ] && source $fzfkeybindings || echo "Plugin fzf-keybindings not found"
 [ -f $fzfcompletion ] && source $fzfcompletion || echo "Plugin fzf-completion not found"
 
-
+# opam configuration
+[[ ! -r /home/javali/.opam/opam-init/init.zsh ]] || source /home/javali/.opam/opam-init/init.zsh  > /dev/null 2> /dev/null
