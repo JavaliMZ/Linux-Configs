@@ -11,6 +11,7 @@ exec_always feh --bg-fill /usr/share/backgrounds/i3/wall.png
 exec_always picom -f --config $HOME/.config/picom/picom.conf
 exec --no-startup-id xrandr --output HDMI-2 --right-of HDMI-1 --auto
 exec_always python $HOME/.config/i3/alternating_layouts.py
+exec --no-startup-id sleep 3 &amp; &amp; xfce4-power-manager
  
 # i3 settings
 set $mod Mod4
