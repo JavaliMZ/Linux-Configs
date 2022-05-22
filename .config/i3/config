@@ -20,12 +20,14 @@ gaps inner 10
 
 # Lanchers
 bindsym $mod+p exec flameshot screen
+bindsym $mod+o exec flameshot gui
 bindsym $mod+Shift+s exec flameshot gui
 bindsym $mod+Return exec alacritty
 bindsym $mod+w kill
 bindsym $mod+Ctrl+space exec --no-startup-id rofi -show drun -theme Monokai -icon-theme "Tela-circle" -show-icons
 bindsym $mod+space exec --no-startup-id rofi -show run -theme Monokai -icon-theme "Numix Circle" -show-icons
 bindsym $mod+l exec betterlockscreen -l
+bindsym $mod+g exec google-chrome-stable
 
 # Volume and brightness
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 5%+ unmute

@@ -1,6 +1,7 @@
 # Path
 extended_path=.:/home/javali/.local/bin:/home/javali/.cargo/bin:/home/javali/.local/share/gem/ruby/3.0.0/bin:/home/javali/.fzf/bin
 export PATH=$PATH:$extended_path
+export PYTHONPATH=$PYTHONPATH:/home/javali/Documents/Exploits-diversos/script_utilities/javali_utilities_python
 
 
 
@@ -20,6 +21,7 @@ alias cat='bat'
 alias ps='procs'
 alias ip="ip -color -family inet -human -oneline -brief add | sed 's/\/.*//g'"
 alias open='xdg-open'
+alias top='bpytop'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
@@ -226,16 +228,16 @@ extractPorts() {
 	checkAmarelo="$amarelo [*]$reset"
 	check="  $verde✔$reset"
 	
-	ports=$(cat $1 | grep -oP '(?<=Ports:).*' | sed "s/,/\n/g" | sed 's/\// /g' | awk '{print $1}' | tr '\n' ',' | sed 's/,$/\n/')
-	portsComEspacos=$(cat $1 | grep -oP '(?<=Ports:).*' | sed "s/,/\n/g" | sed 's/\// /g' | awk '{print $1}' | tr '\n' ',' | sed 's/,$/\n/' | sed 's/,/, /g')
-	ip=$(cat $1 | grep Host | awk '{print $2}' | uniq)
+	ports=$(cat $1 | /bin/grep -oP '(?<=Ports:).*' | sed "s/,/\n/g" | sed 's/\// /g' | awk '{print $1}' | tr '\n' ',' | sed 's/,$/\n/')
+	portsComEspacos=$(cat $1 | /bin/grep -oP '(?<=Ports:).*' | sed "s/,/\n/g" | sed 's/\// /g' | awk '{print $1}' | tr '\n' ',' | sed 's/,$/\n/' | sed 's/,/, /g')
+	ip=$(cat $1 | /bin/grep Host | awk '{print $2}' | uniq)
 	
 	echo "Enumeração das portas:\n" > /tmp/nmapTmp.txt
 	echo "$checkAmarelo \tIP Address: $ip" >> /tmp/nmapTmp.txt
 	echo "$checkAmarelo \tOpen Ports: $portsComEspacos \n" >> /tmp/nmapTmp.txt
 	cmd="nmap -p$ports $ip"
 	echo "$verde Sugestão (copiado em clipboard):$reset \t\t $cmd" >> /tmp/nmapTmp.txt
-	
+	echo -n $cmd | xclip -sel clip
 	cat /tmp/nmapTmp.txt; rm /tmp/nmapTmp.txt
 }
 

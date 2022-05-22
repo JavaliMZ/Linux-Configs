@@ -63,3 +63,9 @@ chmod +x alternating_layouts.py
 ```
 add this line on /.config/i3/config
 >exec_always python $HOME/.config/i3/alternating_layouts.py
+
+
+# pseudo Google-Drive mount
+```bash
+yay google-drive-ocamlfuse
+```

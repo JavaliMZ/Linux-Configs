@@ -154,17 +154,34 @@ tmux_conf_uninstall_plugins_on_reload=true
 # Variables Javali! #
 #####################
 
-# split panes using | and -
-bind . split-window -h
-bind - split-window -v
+# Press Home to go the the beginning of the line
+# Press End to go to the end of the line
+bind -n Home send-key C-a
+bind -n End send-key C-e
+
+# split panes
+bind-key -T root F11 split-window -h
+bind-key -T root F10 split-window -v
+# bind-key -T root F12 kill-pane
 unbind '"'
 unbind %
 
+# switch windows
+bind-key -T root F1 select-window -t 1
+bind-key -T root F2 select-window -t 2
+bind-key -T root F3 select-window -t 3
+bind-key -T root F4 select-window -t 4
+bind-key -T root F5 select-window -t 5
+bind-key -T root F6 select-window -t 6
+bind-key -T root F7 select-window -t 7
+bind-key -T root F8 select-window -t 8
+bind-key -T root F9 select-window -t 9
+
 # switch panes using Alt-arrow without prefix
-bind -n C-Left select-pane -L
-bind -n C-Right select-pane -R
-bind -n C-Up select-pane -U
-bind -n C-Down select-pane -D
+bind -n M-Left select-pane -L
+bind -n M-Right select-pane -R
+bind -n M-Up select-pane -U
+bind -n M-Down select-pane -D
 
 # Enable mouse mode (tmux 2.1 and above)
 set -g mouse on
