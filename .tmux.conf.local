@@ -84,7 +84,7 @@ tmux_conf_theme_left_separator_sub="|"
 tmux_conf_theme_right_separator_main=""
 tmux_conf_theme_right_separator_sub="|"
 
-tmux_conf_theme_status_left="#(getVPNip)"
+tmux_conf_theme_status_left="#(gettargetip)"
 tmux_conf_theme_status_right=" #{prefix}#{mouse}#{pairing}#{synchronized}#{?battery_status,#{battery_status},}#{?battery_bar, #{battery_bar},}#{?battery_percentage, #{battery_percentage},} | #{username}#{root} | #{hostname} "
 
 # status left style
@@ -191,7 +191,8 @@ unbind C-b
 set-option -g prefix C-space
 bind-key C-space send-prefix
 
-# History limite
+# History
+set -g history-file ~/.zsh_history
 set -g history-limit 100000
 
 bind -n C-w kill-pane

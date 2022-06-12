@@ -17,6 +17,7 @@ exec --no-startup-id sleep 3 &amp; &amp; xfce4-power-manager
 set $mod Mod4
 font pango:monospace 15
 gaps inner 10
+border_radius 5
 
 # Lanchers
 bindsym $mod+p exec flameshot screen
@@ -81,4 +82,4 @@ bindsym $mod+Shift+r reload
 bindsym $mod+Shift+Ctrl+r restart
 
 # Hide all titles
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 0
