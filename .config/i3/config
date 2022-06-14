@@ -77,6 +77,10 @@ bindsym $mod+Shift+4 move container to workspace number $ws4; workspace number $
 bindsym $mod+Shift+5 move container to workspace number $ws5; workspace number $ws5
 bindsym $mod+Shift+6 move container to workspace number $ws6; workspace number $ws6
 
+# Moving workspaces between screens 
+bindsym $mod+Ctrl+Shift+1 move workspace to output left
+bindsym $mod+Ctrl+Shift+2 move workspace to output right
+
 # Reload and Restart
 bindsym $mod+Shift+r reload
 bindsym $mod+Shift+Ctrl+r restart

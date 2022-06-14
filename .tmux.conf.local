@@ -191,9 +191,9 @@ unbind C-b
 set-option -g prefix C-space
 bind-key C-space send-prefix
 
-# History
-set -g history-file ~/.zsh_history
-set -g history-limit 100000
-
 bind -n C-w kill-pane
+
+# Popup panel
+bind C-j display-popup -w 85% -h 85% -E "zsh -c 'tmux'"
+
 # "$@"
